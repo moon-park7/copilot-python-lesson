@@ -56,3 +56,45 @@ Privacy information can be found at https://privacy.microsoft.com/en-us/
 
 Microsoft and any contributors reserve all other rights, whether under their respective copyrights, patents,
 or trademarks, whether by implication, estoppel or otherwise.
+
+# API Documentation
+
+This API has the following routes:
+
+## POST /checksum
+
+This route accepts a POST request with a JSON body containing a single field called "text".
+
+### Request Body
+
+The request body must be a JSON object with the following structure:
+
+```json
+{
+    "text": "string"
+}
+
+Running the Application
+To run this application, you will need to use the Uvicorn web server, which is a lightning-fast ASGI server built on uvloop and httptools.
+
+First, install the project dependencies:
+
+pip install -r requirements.txt
+Then, you can start the application with:
+
+uvicorn webapp.main:app --reload
+This command will start the server on localhost at port 8000. You can access the application at http://localhost:8000.
+
+About FastAPI
+FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. It's built on top of Starlette for web routing and Pydantic for data validation.
+
+Key features of FastAPI include:
+
+Fast: Very high performance, on par with NodeJS and Go (thanks to Starlette and Pydantic).
+Fast to code: Increase the speed to develop features by about 200% to 300%.
+Fewer bugs: Reduce about 40% of human (developer) induced errors.
+Intuitive: Great editor support. Completion everywhere. Less time debugging.
+Easy: Designed to be easy to use and learn. Less time reading docs.
+Short: Minimize code duplication. Multiple features from each parameter declaration.
+Robust: Get production-ready code. With automatic interactive documentation.
+For more details, check out the FastAPI documentation.
