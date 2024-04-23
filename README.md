@@ -73,19 +73,24 @@ The request body must be a JSON object with the following structure:
 {
     "text": "string"
 }
+```
+# Running the Application
 
-Running the Application
 To run this application, you will need to use the Uvicorn web server, which is a lightning-fast ASGI server built on uvloop and httptools.
 
 First, install the project dependencies:
 
+```sh
 pip install -r requirements.txt
+```
 Then, you can start the application with:
 
+```sh
 uvicorn webapp.main:app --reload
+```
 This command will start the server on localhost at port 8000. You can access the application at http://localhost:8000.
 
-About FastAPI
+# About FastAPI
 FastAPI is a modern, fast (high-performance), web framework for building APIs with Python 3.6+ based on standard Python type hints. It's built on top of Starlette for web routing and Pydantic for data validation.
 
 Key features of FastAPI include:
@@ -97,4 +102,5 @@ Intuitive: Great editor support. Completion everywhere. Less time debugging.
 Easy: Designed to be easy to use and learn. Less time reading docs.
 Short: Minimize code duplication. Multiple features from each parameter declaration.
 Robust: Get production-ready code. With automatic interactive documentation.
+
 For more details, check out the FastAPI documentation.
